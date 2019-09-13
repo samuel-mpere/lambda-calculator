@@ -1,7 +1,16 @@
 import React, {useState} from "react";
 import "./App.css";
 
-import {numbers, operators, specials} from "./data";
+import numbers from "./components/ButtonComponents/NumberButtons/Numbers";
+
+import operators from "./components/ButtonComponents/OperatorButtons/Operators";
+
+import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
+
+import Operators from './components/ButtonComponents/OperatorButtons/Operators';
+
+import Numbers from './components/ButtonComponents/NumberButtons/Numbers';
+
 
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
@@ -11,11 +20,8 @@ import Logo from "./components/DisplayComponents/Logo";
 
 function App() {
 
-  const [numberState, setNumbeState] = useState(numbers);
-
-  const [operatorState, setOperaterState] = useState(operators);
-
-  const [specialsState, setSpecialsState] = useState(specials);
+  //step2 followed the design rule of placing slices of state in parent component
+  
 
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
@@ -28,6 +34,9 @@ function App() {
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
+        <Numbers/>
+        <Operators/>
+        <Specials/>
       </div>
     </div>
   );
